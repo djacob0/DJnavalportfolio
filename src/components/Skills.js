@@ -16,59 +16,33 @@ const Skills = () => (
   <div name="skills" className="w-full h-screen bg-[#0000CD] text-gray-300">
     <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
       <div>
-        <p className="text-4xl font-bold inline border-b-4 border-gray-600 ">Skills</p>
+        <p className="text-4xl font-bold inline border-b-4 border-gray-600">Skills</p>
         <p className="py-4">The following are my tech stacks</p>
       </div>
 
       <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={NodeJS} alt="HTML icon" />
-          <p className="my-4">Node JS</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={JavaScript} alt="HTML icon" />
-          <p className="my-4">Javascript</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Ruby} alt="HTML icon" />
-          <p className="my-4">Ruby</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={SQL} alt="HTML icon" />
-          <p className="my-4">MS SQL Server</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={HTML} alt="HTML icon" />
-          <p className="my-4">HTML</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={CSS} alt="HTML icon" />
-          <p className="my-4">CSS</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Express} alt="HTML icon" />
-          <p className="my-4">Express JS</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Webix} alt="HTML icon" />
-          <p className="my-4">Webix</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={ReactImg} alt="HTML icon" />
-          <p className="my-4">React</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Docker} alt="HTML icon" />
-          <p className="my-4">Docker</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Source} alt="HTML icon" />
-          <p className="my-4">Tailwind</p>
-        </div>
-        <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-          <img className="w-20 mx-auto" src={Git} alt="HTML icon" />
-          <p className="my-4">GIT</p>
-        </div>
+        {[
+          { img: NodeJS, label: 'Node JS' },
+          { img: JavaScript, label: 'JavaScript' },
+          { img: Ruby, label: 'Ruby' },
+          { img: SQL, label: 'MS SQL Server' },
+          { img: HTML, label: 'HTML' },
+          { img: CSS, label: 'CSS' },
+          { img: Express, label: 'Express JS' },
+          { img: Webix, label: 'Webix' },
+          { img: ReactImg, label: 'React' },
+          { img: Docker, label: 'Docker' },
+          { img: Source, label: 'Tailwind' },
+          { img: Git, label: 'GIT' },
+        ].map((skill) => (
+          <div
+            key={skill.label}
+            className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
+          >
+            <img className="w-20 mx-auto" src={skill.img} alt={`${skill.label} icon`} />
+            <p className="my-4">{skill.label}</p>
+          </div>
+        ))}
       </div>
     </div>
   </div>
