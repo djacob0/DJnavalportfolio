@@ -16,7 +16,7 @@ const About = () => (
           creating a product, developing a feature, or solving complex
           challenges. Feel free to reach out if you&apos;re interested
           in working together or have any questions!
-          You can contact me through the social media links in the left panel. Thank you!
+          You can contact me through the social media links. Thank you!
         </p>
       </div>
     </div>
